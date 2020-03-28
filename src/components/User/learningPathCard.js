@@ -69,6 +69,7 @@ export class learningPathCard extends Component {
             >
               <h1>{path.title}</h1>
               <h3>{path.description}</h3>
+              <Progress percent={path.percent} />
             </Col>
             <Col
               span={2}
