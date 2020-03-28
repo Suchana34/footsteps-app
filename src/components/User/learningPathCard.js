@@ -58,6 +58,31 @@ export class learningPathCard extends Component {
             </Col>
           </Row>
         </div>
+
+        <div className={styles.mobCardContainer}>
+          <Row onClick={() => this.expand()}>
+            <Col
+              span={22}
+              style={{
+                paddingRight: "20px",
+              }}
+            >
+              <h1>{path.title}</h1>
+              <h3>{path.description}</h3>
+            </Col>
+            <Col
+              span={2}
+              className={
+                this.state.expand
+                  ? styles.pathExpand + " " + styles.expandRotate
+                  : styles.pathExpand
+              }
+            >
+              <DownOutlined onClick={() => this.expand()} />
+            </Col>
+          </Row>
+        </div>
+
         <div
           className={
             this.state.expand
